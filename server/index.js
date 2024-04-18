@@ -27,7 +27,10 @@ app.use(cookieParser());
 //     }
 //   }
 // );
-
+app.get("/home", (req, res) => {
+  // res.send("<h1>THis is </h1>");
+  res.redirect("/");
+});
 app.use("/api/auth", require("./routes/authenticate_route"));
 app.use("/api/students", require("./routes/student_routes"));
 
