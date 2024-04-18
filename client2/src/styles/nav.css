@@ -1,0 +1,49 @@
+.navbar {
+  height: 90px;
+}
+
+.navbar-item {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  color: black !important;
+}
+
+.navbar-item:hover {
+  background: none !important;
+  color: #ff6550 !important;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+.nav_container {
+  width: 70%;
+}
+
+.signUpBttn {
+  background: #ff6550 !important;
+  border: none !important;
+  color: #ffffff !important;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+}
+
+.signUpBttn:hover {
+  background: #ec4731 !important;
+  color: #ffffff;
+}
+
+.linkedOut_logo > h1 {
+  font-weight: 900;
+  color: black;
+}
+
+.linkedOut_logo > h1:hover {
+  color: #2434a1;
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+
+/*********** FULL [DESKTOP] SCREEN SIZE ***************/
+/*********** MEDIUM [TABLET] SCREEN SIZE ***************/
+/************ SMALLEST [MOBILE] SCREEN SIZE *************/
+/*# sourceMappingURL=nav.css.map */

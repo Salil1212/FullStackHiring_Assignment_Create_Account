@@ -1,0 +1,57 @@
+.profileList_backRect {
+  background: #ffc651;
+  height: 400px;
+  width: 1200px;
+  -webkit-transform: rotate(-16deg);
+          transform: rotate(-16deg);
+  border-radius: 80px;
+  margin-top: -380px;
+  margin-left: -50px;
+  position: absolute;
+}
+
+.profileList_container {
+  width: 80%;
+  margin: auto;
+}
+
+.profileList_title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+}
+
+h1.title {
+  padding-top: none;
+}
+
+Button.searchBttn {
+  background-color: #356af1 !important;
+  font-weight: 800;
+  font-family: "Raleway", sans-serif;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+Button.searchBttn:hover {
+  background-color: #2434a1 !important;
+}
+
+.searchpanel {
+  background: #ffffff !important;
+  border: none !important;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.loaderbox {
+  width: "100%";
+  height: "80%";
+  display: "flex";
+  -webkit-box-pack: "center";
+      -ms-flex-pack: "center";
+          justify-content: "center";
+  -webkit-box-align: "center";
+      -ms-flex-align: "center";
+          align-items: "center";
+}
+/*# sourceMappingURL=viewall.css.map */

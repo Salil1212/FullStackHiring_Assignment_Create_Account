@@ -1,0 +1,70 @@
+// Styling for git component
+
+$raleway: "Raleway",
+sans-serif;
+$montserrat: "Montserrat",
+sans-serif;
+
+$title-family:$raleway;
+
+$darkBlue: #2434a1;
+$medBlue: #356af1;
+$yellow: #ffc651;
+$pink: #ffcbc4;
+$coral: #ff6550;
+$darkCoral: #ec4731;
+$lightGrey: #e9e9e9;
+$medGrey: #eeeeee;
+$white: #ffffff;
+
+.navbar {
+  height: 90px;
+}
+
+.navbar-item {
+  font-family: $raleway;
+  font-weight: 700;
+  color: black !important;
+}
+
+.navbar-item:hover {
+  background: none !important;
+  color: $coral !important;
+  transition: 0.3s ease-out;
+}
+
+.nav_container {
+  width: 70%;
+}
+
+.signUpBttn {
+  background: $coral !important;
+  border: none !important;
+  color: $white !important;
+  font-family: $raleway;
+  font-weight: 700;
+}
+
+.signUpBttn:hover {
+  background: $darkCoral !important;
+  color: $white;
+}
+
+.linkedOut_logo>h1 {
+  font-weight: 900;
+  color: black;
+}
+
+.linkedOut_logo>h1:hover {
+  color: $darkBlue;
+  transition: 0.2s ease-out;
+}
+
+/*********** FULL [DESKTOP] SCREEN SIZE ***************/
+@media only screen and (min-width: 961px) {}
+
+/*********** MEDIUM [TABLET] SCREEN SIZE ***************/
+@media only screen and (min-width: 401px) and (max-width: 960px) {}
+
+/************ SMALLEST [MOBILE] SCREEN SIZE *************/
+@media only screen and (max-width: 400px) {}

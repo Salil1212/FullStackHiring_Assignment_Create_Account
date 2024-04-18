@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i,700,700i,800,800i,900|Raleway:400,400i,500,500i,600,600i,700,700i,800,800i,900&display=swap");
+.about_container {
+  z-index: 20;
+  width: 70% !important;
+}
+
+.about_back_rect {
+  position: absolute;
+  -webkit-transform: rotate(-20deg);
+  transform: rotate(-20deg);
+  width: 1200px;
+  height: 400px;
+  border-radius: 160px;
+  background: #ffcbc4;
+  z-index: -1;
+  margin-top: -400px;
+  margin-left: 140px;
+}
+
+.about_front_rect {
+  z-index: -1;
+  background-color: #ffc651;
+  width: 1000px;
+  height: 850px;
+  border-radius: 60px;
+  margin-top: 100px;
+  position: absolute;
+  -webkit-transform: rotate(-20deg);
+  transform: rotate(-20deg);
+  margin-left: 1000px;
+}
+
+.about_front_rect::after {
+  content: "";
+  width: 90px;
+  height: 90px;
+  background-color: #eeeeee;
+  position: absolute;
+  border-radius: 30px;
+  margin-top: 80px;
+  margin-left: -800px;
+}
+
+h1.about_headTitle {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+}
+
+h1.about_title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800 !important;
+}
+/*# sourceMappingURL=about.css.map */
