@@ -31,6 +31,6 @@ app.use(cookieParser());
 app.use("/api/auth", require("./routes/authenticate_route"));
 app.use("/api/students", require("./routes/student_routes"));
 
-app.listen(process.env.PORT || 4000, () =>
+app.listen(process.env.PORT || 8080, () =>
   console.log("Listening on http://localhost:8080")
 );
