@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const morgan = require("morgan");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
-
+const { PORT, mongoDBURL } = require("./config");
 require("dotenv").config();
 
 const { initializePassport } = require("./middleware/Createtoken");
@@ -16,24 +16,21 @@ app.use(initializePassport);
 app.use(cors({ credentials: true, origin: true }));
 app.use(cookieParser());
 
-// mongoose.connect(
-//   process.env.DB_PATH || process.env.TEST_DB_PATH,
-//   { useNewUrlParser: true },
-//   (err) => {
-//     if (err) {
-//       console.log("Error connecting to database", err);
-//     } else {
-//       console.log("Connected to database!");
-//     }
-//   }
-// );
+mongoose
+  .connect(mongoDBURL)
+  .then(() => {
+    console.log("App connected to database");
+  })
+  .catch((error) => console.log(error));
 app.get("/home", (req, res) => {
-  // res.send("<h1>THis is </h1>");
-  res.redirect("/");
+  res.send("This is home page");
+});
+app.get("/", (req, res) => {
+  res.send("This is dashboard");
 });
 app.use("/api/auth", require("./routes/authenticate_route"));
 app.use("/api/students", require("./routes/student_routes"));
 
-app.listen(process.env.PORT || 8080, () =>
-  console.log("Listening on http://localhost:8080")
+app.listen(PORT || 8080, () =>
+  console.log(`Listening on http://localhost:${PORT}`)
 );

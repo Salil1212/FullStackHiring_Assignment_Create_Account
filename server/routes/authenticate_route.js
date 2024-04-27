@@ -25,27 +25,29 @@ router.post("/register", (req, res) => {
     seeking: req.body.seeking,
     bio: req.body.bio,
 
-    gravatar: md5(req.body.email),
+    // gravatar: md5(req.body.email),
   });
 
   newStudent.save();
-
+  // res.status(201).send("Student added successfully");
   const newUser = new User({
     email: req.body.email,
     password: req.body.password,
 
     student: newStudent._id,
   });
+  newUser.save();
+  res.status(201).send("Student added successfully");
 
-  User.register(newUser, req.body.password, (err) => {
-    if (err) {
-      res.status(500).send(err.message);
-    }
+  // User.register(newUser, req.body.password, (err) => {
+  //   if (err) {
+  //     res.status(500).send(err.message);
+  //   }
 
-    passport.authenticate("local", { session: false })(req, res, () => {
-      signJwtForSignUp(req, res, newUser);
-    });
-  });
+  //   passport.authenticate("local", { session: false })(req, res, () => {
+  //     signJwtForSignUp(req, res, newUser);
+  //   });
+  // });
 });
 
 router.post("/login", login, signJwtForLogin);
